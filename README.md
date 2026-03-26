@@ -1,79 +1,36 @@
-# FYP Auto Tester 🚀
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-A comprehensive full-stack application designed for automated BDD (Behavior Driven Development) testing, accessibility auditing, and performance benchmarking.
+## Getting Started
 
-## 🌟 Features
-
-- **Automated BDD Testing**: Integrated with Cucumber for Gherkin-style test execution.
-- **Accessibility Auditing**: Powered by `axe-core` to ensure WCAG compliance.
-- **Performance Benchmarking**: Uses `Lighthouse` for detailed performance insights.
-- **Web Automation**: Leverages `Puppeteer` for seamless browser interactions.
-- **Full-Stack Architecture**: Modern React frontend with a robust Node.js/Express backend.
-- **Cloud Integration**: Cloudinary support for media management and Clerk for authentication.
-
-## 🏗️ Project Structure
-
-```text
-.
-├── client/          # Vite + React Frontend
-├── server/          # Node.js + Express Backend (+ Mongoose/MySQL)
-├── package.json     # Root configuration for concurrent execution
-└── .gitignore       # Optimized git ignore rules
-```
-
-## 🛠️ Getting Started
-
-### Prerequisites
-
-- Node.js (v18 or higher)
-- MongoDB / MySQL (depending on your configuration)
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/ma5311943-dotcom/bdd.git
-   cd bdd
-   ```
-
-2. Install all dependencies (root, client, and server):
-   ```bash
-   npm run install:all
-   ```
-
-### Configuration
-
-Setup your environment variables by creating `.env` files in both `client` and `server` directories based on the provided `.env.example` files.
-
-#### Server (`server/.env`)
-```env
-PORT=5000
-MONGO_URI=your_mongodb_uri
-CLOUDINARY_NAME=your_name
-...
-```
-
-#### Client (`client/.env`)
-```env
-VITE_CLERK_PUBLISHABLE_KEY=your_clerk_key
-```
-
-### Running the Application
-
-To start both the client and server concurrently:
+First, run the development server:
 
 ```bash
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-The application will be available at:
-- Frontend: `http://localhost:5173`
-- Backend: `http://localhost:5000`
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 🧪 Testing with BDD
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-The server includes a dedicated BDD service that processes Gherkin features and executes them using Puppeteer.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## 📜 License
+## Learn More
 
-This project is licensed under the MIT License.
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
