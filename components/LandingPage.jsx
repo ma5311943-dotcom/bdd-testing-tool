@@ -50,7 +50,7 @@ const LandingPage = ({ onStart }) => {
         <div className="portal-hero hero-content">
           <div className="status-chip">
             <div className="status-dot"></div>
-            TestifyAI Core v4.0 Active
+            Bdd Testify Scenarios Core v4.0 Active
           </div>
 
           <h1 className="hero-title">
@@ -141,3 +141,4 @@ const LandingPage = ({ onStart }) => {
 };
 
 export default LandingPage;
+

@@ -1,0 +1,29 @@
+{
+  "name": "fyp-auto-tester-server",
+  "version": "1.0.0",
+  "description": "Backend for FYP Auto Tester",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "npm install",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^12.5.0",
+    "axe-core": "^4.8.0",
+    "axios": "^1.13.2",
+    "cheerio": "^1.0.0-rc.12",
+    "chrome-launcher": "^1.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.1",
+    "lighthouse": "^13.0.1",
+    "mongoose": "^9.1.6",
+    "multer": "^2.0.2",
+    "puppeteer": "^21.0.0"
+  },
+  "devDependencies": {
+    "@axe-core/puppeteer": "^4.11.0",
+    "nodemon": "^3.1.11"
+  }
+}

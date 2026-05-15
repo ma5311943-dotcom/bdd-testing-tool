@@ -137,7 +137,7 @@ const ChatPage = ({ role }) => {
                                         {role === 'admin' ? selectedUser[0].toUpperCase() : 'A'}
                                     </div>
                                     <div className="details">
-                                        <h3>{role === 'admin' ? selectedUser : 'TestifyAI Support'}</h3>
+                                        <h3>{role === 'admin' ? selectedUser : 'Bdd Testify Scenarios Support'}</h3>
                                         <span>Typically replies in minutes</span>
                                     </div>
                                 </div>
@@ -193,3 +193,4 @@ const ChatPage = ({ role }) => {
 };
 
 export default ChatPage;
+

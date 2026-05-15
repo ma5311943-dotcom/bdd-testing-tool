@@ -37,13 +37,22 @@ export default function Navbar({ scrolled }) {
   };
 
   useEffect(() => {
-    if (isMobileMenuOpen && mobileMenuRef.current) {
-      gsap.fromTo(
-        mobileMenuRef.current,
-        { opacity: 0, y: -20 },
-        { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }
-      );
+    if (isMobileMenuOpen) {
+      document.body.classList.add("no-scroll");
+      if (mobileMenuRef.current) {
+        gsap.fromTo(
+          mobileMenuRef.current,
+          { opacity: 0, y: -20, scale: 0.95 },
+          { opacity: 1, y: 0, scale: 1, duration: 0.3, ease: "power2.out" }
+        );
+      }
+    } else {
+      document.body.classList.remove("no-scroll");
     }
+
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
   }, [isMobileMenuOpen]);
 
   return (
@@ -58,7 +67,7 @@ export default function Navbar({ scrolled }) {
             borderRadius: "8px",
           }}
         ></div>
-        <span>Testify</span> AI
+        <span>Bdd</span> Testify Scenarios
       </div>
 
       {/* Desktop Links */}
@@ -108,7 +117,12 @@ export default function Navbar({ scrolled }) {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="mobile-menu" ref={mobileMenuRef}>
+        <>
+          <div
+            className="mobile-menu-overlay"
+            onClick={() => setIsMobileMenuOpen(false)}
+          ></div>
+          <div className="mobile-menu" ref={mobileMenuRef}>
           {isSignedIn && (
             <>
               <div className="mobile-user-profile">
@@ -148,7 +162,8 @@ export default function Navbar({ scrolled }) {
             </SignInButton>
           )}
         </div>
-      )}
-    </nav>
+      </>
+    )}
+  </nav>
   );
 }

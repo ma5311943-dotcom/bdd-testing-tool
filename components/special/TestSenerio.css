@@ -23,16 +23,16 @@
 
 /* Animated Background matching Landing Page */
 .test-scenario-container {
-  padding: 80px 20px 20px;
+  padding: 80px 20px 40px;
   background: radial-gradient(circle at top right, #0a0a1f, #030305, #000);
   background-size: 200% 200%;
   animation: studio-bg-animate 15s ease infinite;
-  height: 100vh;
+  min-height: 100vh;
   color: var(--studio-text);
   font-family: 'Inter', system-ui, sans-serif;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-x: hidden;
   position: relative;
 }
 
@@ -114,7 +114,7 @@
   background: var(--studio-accent);
   color: #fff;
   border: none;
-  padding: 10px 24px;
+  padding: 6px 24px;
   border-radius: 8px;
   font-size: 0.8rem;
   font-weight: 900;
@@ -259,7 +259,7 @@
 /* execution terminal */
 .kernel-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr));
   gap: 15px;
 }
 
@@ -523,30 +523,37 @@
 
 @media (max-width: 1024px) {
   .test-scenario-container {
-    padding: 70px 10px 10px;
+    padding: 100px 15px 40px;
     height: auto;
     overflow-y: auto;
   }
 
   .suite-header {
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
     align-items: stretch;
-    margin-top: 10px;
+    padding: 20px;
   }
 
   .global-controls {
     margin: 0;
     max-width: none;
+    order: 3;
+  }
+
+  .header-actions {
+    justify-content: space-between;
+    width: 100%;
+    order: 2;
   }
 
   .workspace-suite {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 20px;
   }
 
   .zone-vault {
-    height: 350px;
+    height: 400px;
   }
 
   .zone-execution {
@@ -559,23 +566,41 @@
 }
 
 @media (max-width: 640px) {
+  .suite-header {
+    padding: 15px;
+  }
+
+  .header-brand h2 {
+    font-size: 0.9rem;
+  }
+
   .header-actions {
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .run-btn-hero {
     width: 100%;
-    order: -1;
+    padding: 8px;
   }
 
   .mode-toggle-pill {
     width: 100%;
-    justify-content: center;
+    justify-content: space-around;
   }
 
   .mode-btn {
     flex: 1;
     justify-content: center;
+    font-size: 0.65rem;
+    padding: 8px;
+  }
+
+  .kernel-node {
+    padding: 15px;
+  }
+
+  .node-title {
+    font-size: 0.9rem;
   }
 }

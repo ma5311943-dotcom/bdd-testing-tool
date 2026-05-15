@@ -232,6 +232,7 @@
     grid-template-columns: 1fr;
     text-align: center;
     padding-top: 6rem;
+    gap: 3rem;
   }
 
   .hero-description,
@@ -246,6 +247,7 @@
 
   .stats-hud {
     justify-content: center;
+    gap: 2rem;
   }
 }
 
@@ -255,6 +257,27 @@
   }
 
   .hero-title {
-    font-size: 3rem;
+    font-size: clamp(2.2rem, 8vw, 3rem);
+  }
+
+  .hero-actions-container {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1rem;
+  }
+
+  .hero-actions-container button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .stats-hud {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
   }
 }

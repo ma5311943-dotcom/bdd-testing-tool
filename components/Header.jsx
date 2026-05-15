@@ -9,7 +9,7 @@ const Header = () => {
       <div className="brand-section">
         <ShieldCheck size={38} className="brand-icon" />
         <div className="brand-text">
-          <h1>TestifyAI</h1>
+          <h1>Bdd Testify Scenarios</h1>
           <span>Behavioral Analysis Engine v4.0</span>
         </div>
       </div>
@@ -24,3 +24,4 @@ const Header = () => {
 };
 
 export default Header;
+

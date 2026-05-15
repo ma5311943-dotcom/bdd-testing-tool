@@ -1,0 +1,55 @@
+/* ============================================================ */
+/* REPORT HEADER: SCAN IDENTITY & STATUS                        */
+/* ============================================================ */
+
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 2rem;
+}
+
+.brand-section {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.brand-icon {
+  color: var(--primary);
+  filter: drop-shadow(0 0 10px var(--primary-glow));
+}
+
+.brand-text h1 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.brand-text span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.account-section {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .report-header {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+}

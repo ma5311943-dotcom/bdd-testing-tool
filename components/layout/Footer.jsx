@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-info">
             <h4 className="logo">
-              <span>Testify</span> AI
+              <span>Bdd</span> Testify Scenarios
             </h4>
             <p>
               The standard in AI-driven web analysis. Providing deep insights
@@ -108,7 +108,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>© 2026 TestifyAI. All rights reserved.</p>
+          <p>© 2026 Bdd Testify Scenarios. All rights reserved.</p>
           <div style={{ display: "flex", gap: "2rem" }}>
             <a
               style={{ textDecoration: "none", color: "var(--text-dim)" }}
@@ -128,3 +128,4 @@ export default function Footer() {
     </footer>
   );
 }
+
